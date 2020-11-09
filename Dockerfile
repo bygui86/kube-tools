@@ -106,4 +106,4 @@ WORKDIR /
 # USER 1000
 
 ENV KUBECONFIG=/kubeconfig
-ENTRYPOINT [ "bash -c sleep 30d" ]
+ENTRYPOINT [ "bash -c sleep 365d" ]

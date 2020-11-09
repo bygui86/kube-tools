@@ -5,7 +5,7 @@ Linux based container image containing some Kubernetes tools to make ops life ea
 
 This project was inspired by [lucj/k8tools](https://github.com/lucj/k8stools).
 
-## Content
+## Content - `UPDATE`
 
 The image contains:
 - common packages
@@ -53,20 +53,26 @@ k9s
 ### required
 - [x] remove helm2
 - [x] remove k9s version and take always latest one
-- [?] add kustomize
+- [x] put container to sleep for other kind of usages
+- [x] add kustomize
 - [x] add gcloud sdk
 - [x] add k8sec
 - [x] add k8stail
 - [x] add stern
 - [x] add yq
 - [x] add httpie
-- [ ] put container to sleep for other kind of usages
+- [ ] add certbot
+- [ ] add certbot-dns-google plugin
+- [ ] add python3
+- [ ] add golang
 - [ ] review kubectl aliases
-- [x] update ubuntu base image
 ### optional
 - [x] add popeye
 - [x] add rbac-lookup
 - [ ] add kubectl krew
 - [ ] add zsh
 - [ ] add zsh-completion
-- [ ] exec as non root
+- [ ] `TBD` exec as non root
+	- [ ] execute as anonyous user 1000
+	- [ ] remove root
+
