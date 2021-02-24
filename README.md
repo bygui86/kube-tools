@@ -5,23 +5,31 @@ Linux based container image containing some Kubernetes tools to make ops life ea
 
 This project was inspired by [lucj/k8tools](https://github.com/lucj/k8stools).
 
-## Content - `UPDATE`
+## Content
 
 The image contains:
 - common packages
-  - curl
-  - ca-certificates
-  - git
   - vim
   - bash-completion
+  - ca-certificates
+  - git
+  - curl
+  - httpie
   - jq
-- Kubernetes-related tools
+  - yq
+- Cloud related tools
+  - gcloud sdk
+- Kubernetes related tools
   - kubectl (with bash completion)
   - kubectl aliases (https://github.com/ahmetb/kubectl-aliases)
   - kubectx / kubens (https://github.com/ahmetb/kubectx)
   - kube-ps1 (https://github.com/jonmosco/kube-ps1)
-  - helm
   - k9s
+  - stern
+  - k8stail
+  - k8sec
+  - kustomize
+  - helm (v2 and v3)
 
 ## Build
 
@@ -66,13 +74,15 @@ k9s
 - [ ] add python3
 - [ ] add golang
 - [ ] review kubectl aliases
+- [ ] exec as non root (use 1001)
+- [ ] use a script as entrypoint
+- [ ] create a makefile
 ### optional
 - [x] add popeye
 - [x] add rbac-lookup
 - [ ] add kubectl krew
 - [ ] add zsh
 - [ ] add zsh-completion
-- [ ] `TBD` exec as non root
-	- [ ] execute as anonyous user 1000
-	- [ ] remove root
-
+- [ ] remove root commands
+  - [ ] su
+  - [ ] sudo
